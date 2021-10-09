@@ -12,16 +12,15 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>book-warehouse</artifactId>
+    <artifactId>book-shop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>book-warehouse</name>
-    <description>Book warehouse for book shop</description>
+    <name>book-shop</name>
+    <description>Book Shop backend</description>
     <packaging>jar</packaging>
 
     <properties>
         <jar.name>${artifactId}</jar.name>
         <java.version>11</java.version>
-        <mysql-connector-java.version>8.0.26</mysql-connector-java.version>
     </properties>
 
     <dependencies>
@@ -56,13 +55,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-            <version>${mysql-connector-java.version}</version>
         </dependency>
     </dependencies>
 
