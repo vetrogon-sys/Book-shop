@@ -10,23 +10,23 @@ services:
 
   mysqlbd:
     container_name: mysql
-    image: mysql
-      command: --default-authentication-plugin=mysql_native_password
-      restart: always
-      environment:
-        MYSQL_ROOT_PASSWORD: pass
-
-  adminer:
-    image: adminer
-    restart: always
+    image: mysql:5.7
     ports:
-      - 3626:3626
+      - 5442:5442
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   book-warehouse:
     container_name: book-warehouse
     build: ./book-warehouse/
     ports:
-    - 8082:8082
+      - 8082:8082
     environment:
     depends_on:
       - mysqlbd
