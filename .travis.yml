@@ -1,0 +1,17 @@
+sudo: false
+
+language: java
+jdk: oraclejdk11
+dist: trusty
+
+install: true
+script:
+  - cd book-shop-be
+  - mvn clean test
+  - cd ..
+  - mvn clean test
+
+branches:
+  only:
+    - master
+    - development
