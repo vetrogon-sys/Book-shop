@@ -8,7 +8,7 @@ install: true
 script:
   - cd book-shop-be
   - mvn clean test
-  - cd ..
+  - cd ../book-warehouse-be
   - mvn clean test
 
 branches:
