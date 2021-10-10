@@ -63,3 +63,19 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     depends_on:
       - mysqldb
+
+  warehouse-fe:
+    container_name: warehouse-fe
+    build: ./warehouse-fe/
+    ports:
+      - 3400:3400
+    depends_on:
+      - book-warehouse
+
+  shop-fe:
+    container_name: shop-fe
+    build: ./shop-fe/
+    ports:
+      - 3200:3200
+    depends_on:
+      - book-shop

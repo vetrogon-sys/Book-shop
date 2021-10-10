@@ -5,6 +5,7 @@
    - backend: Java, Spring Boot
    - frontend: ReactJs, TypeScript
    - database: MySQL, MongoDB
+   - CI: TravisCI
 
 ## To run application
 
@@ -40,3 +41,15 @@ From project root directory run:
 3. Run book-shop application (By default use port 8081)
 
    - same as in [2.2]
+    
+4. Run shop-fe (By default use port 3200)
+
+    From `shop-fe` directory
+    
+    `npm install`
+   
+    `npm start`
+   
+5. Run warehouse-fe (By default use port 3400)
+
+    - same as in [2.5] from `warehouse-fe` directory
